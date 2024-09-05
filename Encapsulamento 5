@@ -1,0 +1,63 @@
+
+public abstract class Animal {
+    
+   
+    public abstract void emitirSom();
+    
+   
+    public abstract void mover();
+    
+    
+        System.out.println("O animal está dormindo.");
+    }
+    
+    
+    public void comer() {
+        System.out.println("O animal está comendo.");
+    }
+}
+
+
+public class Cachorro extends Animal {
+
+    @Override
+    public void emitirSom() {
+        System.out.println("O cachorro está latindo.");
+    }
+
+    @Override
+    public void mover() {
+        System.out.println("O cachorro está correndo.");
+    }
+}
+
+
+public class Gato extends Animal {
+
+    @Override
+    public void emitirSom() {
+        System.out.println("O gato está miando.");
+    }
+
+    @Override
+    public void mover() {
+        System.out.println("O gato está andando.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal meuCachorro = new Cachorro();
+        Animal meuGato = new Gato();
+
+        meuCachorro.emitirSom();
+        meuCachorro.mover();
+        meuCachorro.dormir();
+        meuCachorro.comer();
+
+        meuGato.emitirSom();
+        meuGato.mover();
+        meuGato.dormir();
+        meuGato.comer();
+    }
+}
